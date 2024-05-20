@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\nigger\\csharpSDK\\csharp-sdk\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64574C61-4AD0-44E3-B709-F8ECC62DBDAD}|csharp-sdk\\csharp-sdk.csproj|d:\\nigger\\csharpsdk\\csharp-sdk\\csharp-sdk\\velvetauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64574C61-4AD0-44E3-B709-F8ECC62DBDAD}|csharp-sdk\\csharp-sdk.csproj|solutionrelative:csharp-sdk\\velvetauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64574C61-4AD0-44E3-B709-F8ECC62DBDAD}|csharp-sdk\\csharp-sdk.csproj|d:\\nigger\\csharpsdk\\csharp-sdk\\csharp-sdk\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64574C61-4AD0-44E3-B709-F8ECC62DBDAD}|csharp-sdk\\csharp-sdk.csproj|solutionrelative:csharp-sdk\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "velvetauth.cs",
+              "DocumentMoniker": "D:\\nigger\\csharpSDK\\csharp-sdk\\csharp-sdk\\velvetauth.cs",
+              "RelativeDocumentMoniker": "csharp-sdk\\velvetauth.cs",
+              "ToolTip": "D:\\nigger\\csharpSDK\\csharp-sdk\\csharp-sdk\\velvetauth.cs",
+              "RelativeToolTip": "csharp-sdk\\velvetauth.cs",
+              "ViewState": "AQIAAL4AAAAAAAAAAAAYwMQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T11:27:35.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\nigger\\csharpSDK\\csharp-sdk\\csharp-sdk\\Program.cs",
+              "RelativeDocumentMoniker": "csharp-sdk\\Program.cs",
+              "ToolTip": "D:\\nigger\\csharpSDK\\csharp-sdk\\csharp-sdk\\Program.cs",
+              "RelativeToolTip": "csharp-sdk\\Program.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAwwAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-20T09:32:55.147Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

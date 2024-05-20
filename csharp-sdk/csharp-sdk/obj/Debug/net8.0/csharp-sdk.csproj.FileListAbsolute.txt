@@ -1,0 +1,17 @@
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\bin\Debug\net8.0\csharp-sdk.exe
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\bin\Debug\net8.0\csharp-sdk.deps.json
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\bin\Debug\net8.0\csharp-sdk.runtimeconfig.json
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\bin\Debug\net8.0\csharp-sdk.dll
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\bin\Debug\net8.0\csharp-sdk.pdb
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.csproj.AssemblyReference.cache
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.GeneratedMSBuildEditorConfig.editorconfig
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.AssemblyInfoInputs.cache
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.AssemblyInfo.cs
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.csproj.CoreCompileInputs.cache
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.csproj.Up2Date
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.dll
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\refint\csharp-sdk.dll
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.pdb
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\csharp-sdk.genruntimeconfig.cache
+D:\nigger\csharpSDK\csharp-sdk\csharp-sdk\obj\Debug\net8.0\ref\csharp-sdk.dll
