@@ -66,6 +66,7 @@ public class vauth : IDisposable
 
                 if (jsonResponse.error == "Initialization successful")
                 {
+
                     return true;
                 }
                 else if (jsonResponse.error == "wrong_version")
@@ -140,6 +141,9 @@ public class vauth : IDisposable
             {
                 if (jsonResponse.message == "Registration successful")
                 {
+                    Username = username;
+                    Email = jsonResponse.data.email;
+                    ExpiryDate = jsonResponse.data.expiry_date;
                     Console.WriteLine("Registration successful.");
                     return true;
                 }
