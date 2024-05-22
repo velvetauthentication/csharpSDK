@@ -5,8 +5,8 @@ namespace SharpSDK
     internal class Program
     {
         public static vauth api = new vauth(
-            appId: "appid",
-            secret: "secret",
+            appId: "<app_id",
+            secret: "<secret>",
             version: "1.0");
         static void Main(string[] args)
         {
@@ -42,10 +42,13 @@ namespace SharpSDK
             Console.Write("email: ");
             string email = Console.ReadLine();
 
-            if(api.RegisterLicense(username, password, token, email))
-            {
-                Console.Write("Welcome :)");
+            if (api.RegisterLicense(username, password, token, email)) {
 
+                var user = api.Username.ToString();
+                var dataEmail = api.Email.ToString();
+                var exp = api.ExpiryDate.ToString();
+                Console.Write("Welcome :)\r\n");
+                Console.Write($"{user} {dataEmail} {exp}");
             }
            
         }
@@ -62,7 +65,11 @@ namespace SharpSDK
 
             if (api.LoginUser(username, password))
             {
-                Console.Write("Welcome :)");
+               var user = api.Username.ToString();
+               var dataEmail = api.Email.ToString();
+               var exp = api.ExpiryDate.ToString();
+                Console.Write("Welcome :)\n\r");
+                Console.Write($"{user} {dataEmail} {exp}");
 
             }
 
