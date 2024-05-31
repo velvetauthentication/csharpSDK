@@ -5,7 +5,7 @@ namespace SharpSDK
     internal class Program
     {
         public static vauth api = new vauth(
-            appId: "<app_id",
+            appId: "<app_id>",
             secret: "<secret>",
             version: "1.0");
         static void Main(string[] args)

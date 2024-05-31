@@ -211,6 +211,7 @@ public class vauth : IDisposable
                 }
                 else
                 {
+                    Console.WriteLine(jsonResponse.message);
                 }
             }
             else
@@ -255,6 +256,7 @@ public class vauth : IDisposable
                 }
                 else
                 {
+                    Console.WriteLine(jsonResponse.message);
                 }
             }
             else
