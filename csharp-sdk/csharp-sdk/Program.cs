@@ -41,8 +41,8 @@ namespace SharpSDK
 
             Console.Write("email: ");
             string email = Console.ReadLine();
-
-            if (api.RegisterLicense(username, password, token, email)) {
+           
+            if (api.RegisterLicense(username, password, token,email)) {
 
                 var user = api.Username.ToString();
                 var dataEmail = api.Email.ToString();

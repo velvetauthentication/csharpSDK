@@ -17,7 +17,9 @@ public class vauth : IDisposable
 
     public string Username { get; private set; }
     public string Email { get; private set; }
-    public DateTime ExpiryDate { get; private set; }
+    public int user_level { get; private set; }
+
+    public DateTime? ExpiryDate { get; private set; }
     public string _hwid = WindowsIdentity.GetCurrent().User.Value;
 
     public vauth(string appId, string secret, string version)
@@ -143,7 +145,8 @@ public class vauth : IDisposable
                 {
                     Username = username;
                     Email = jsonResponse.data.email;
-                    ExpiryDate = jsonResponse.data.expiry_date;
+                    ExpiryDate = jsonResponse.data.expiry_date != null ? jsonResponse.data.expiry_date : (DateTime?)null;
+                    user_level = jsonResponse.data.user_level;
                     Console.WriteLine("Registration successful.");
                     return true;
                 }
@@ -158,6 +161,10 @@ public class vauth : IDisposable
                 else if (jsonResponse.message == "License key is already used")
                 {
                     Console.WriteLine("Registration failed: License key is already used.");
+                }
+                else if (jsonResponse.message == "Please enable the keyless feature on the VelvetAuth dashboard or contact the developer")
+                {
+                    Console.WriteLine("Registration failed: Please enable the keyless feature on the VelvetAuth dashboard or contact the developer.");
                 }
                 else
                 {
@@ -176,6 +183,65 @@ public class vauth : IDisposable
         return false;
     }
 
+    public bool keyless_register(string username, string password, string email)
+    {
+        var encryptedUsername = EncryptString(_secret, username);
+        var encryptedPassword = EncryptString(_secret, password);
+        var encryptedEmail = EncryptString(_secret, email);
+        var encryptedHwid = EncryptString(_secret, _hwid);
+
+        var requestData = new
+        {
+            type = "keyless",
+            username = encryptedUsername,
+            app_id = _appId,
+            password = encryptedPassword,
+            secret = _secret,
+            email = encryptedEmail,
+            hwid = encryptedHwid
+        };
+
+        var response = Post("index.php", requestData);
+        var responseContent = response.Content.ReadAsStringAsync().Result;
+
+        try
+        {
+            dynamic jsonResponse = JsonConvert.DeserializeObject(responseContent);
+            if (jsonResponse != null)
+            {
+                if (jsonResponse.message == "Registration successful")
+                {
+                    Username = username;
+                    Email = jsonResponse.data.email;
+                    ExpiryDate = jsonResponse.data.expiry_date != null ? jsonResponse.data.expiry_date : (DateTime?)null;
+                    user_level = jsonResponse.data.user_level;
+                    Console.WriteLine("Registration successful.");
+                    return true;
+                }
+                else if (jsonResponse.message == "Username is already used")
+                {
+                    Console.WriteLine("Registration failed: Username is already used.");
+                }
+                else if (jsonResponse.message == "Email is already used")
+                {
+                    Console.WriteLine("Registration failed: Email is already used.");
+                }
+                else
+                {
+                    Console.WriteLine("Registration failed: " + (jsonResponse.message ?? "Unknown error"));
+                }
+            }
+            else
+            {
+                Console.WriteLine("No valid response received from API.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("JSON Parsing error during registration: " + ex.Message);
+        }
+        return false;
+    }
     public bool LoginUser(string username, string password)
     {
         var encryptedUsername = EncryptString(_secret, username);
@@ -206,7 +272,8 @@ public class vauth : IDisposable
                 {
                     Username = username;
                     Email = jsonResponse.data.email;
-                    ExpiryDate = jsonResponse.data.expiry_date;
+                    ExpiryDate = jsonResponse.data.expiry_date != null ? jsonResponse.data.expiry_date : (DateTime?)null;
+                    user_level = jsonResponse.data.user_level;
                     return true;
                 }
                 else
