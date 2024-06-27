@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Net.Http;
 using System.Security.Cryptography;
@@ -10,7 +10,7 @@ using System.Diagnostics;
 public class vauth : IDisposable
 {
     private HttpClient _httpClient = new HttpClient();
-    private string _apiBaseUrl = "https://velvetauth.com/enc/";
+    private string _apiBaseUrl = "https://velvetauth.com/api/1.1";
     private string _appId;
     private string _secret;
     private string _version;
